@@ -33,7 +33,7 @@ while x != 20:
     if a == 4:
         a = 0
     if x == 20:
-        print('\n\n\033[1;32;40mMission Accomplished - Retina Scanned - Access Granted\n')
+        print('\n\n\033[1;32;40mMission Accomplished - Retina Scanned - Access Granted')
 
 
 
@@ -82,26 +82,26 @@ def gasLevelAlert():
     milesToGasStationLow = round(random.uniform(1, 25), 2)
     milesToGasStationQuartTank = round(random.uniform(26, 50), 2)
     if gasLevelIndicator == "Empty":
-        print("***WARNING YOU ARE ON EMPTY***")
+        print("\n***WARNING YOU ARE ON EMPTY***")
         sleep(1)
         print("Calling Emergency Contact")
     elif gasLevelIndicator == "Low":
-        print("****Warning****")
+        print("\n****Warning****")
         sleep(1)
         print("Your gas tank is extremely low, checking Google Maps for the closest gas station.")
         sleep(1)
         print("The closest gas station is",listOfGasStations(),"which is",milesToGasStationLow,"miles away.")
     elif gasLevelIndicator == "QuarterTank":
-        print("***Warning***")
+        print("\n***Warning***")
         sleep(1)
         print("Your gas tank is at a Quarter Tank and the closest gas station is",listOfGasStations(),"which is",milesToGasStationQuartTank,"miles away.")
     elif gasLevelIndicator == "Half Tank":
-        print("Your gas tank is a half of a tank full which is plenty of gas to make it to your destinations today.")
+        print("\nYour gas tank is a half of a tank full which is plenty of gas to make it to your destinations today.")
     elif gasLevelIndicator == "Three Quarter Tank":
-        print("Your gas tank is at three quarters of a tank which is "
+        print("\nYour gas tank is at three quarters of a tank which is "
               "plenty of gas to make it to your destinations today.")
     else:
-        print("Your gas tank is full - Yeah! - Congratulations - Vroom Vroom.")
+        print("\nYour gas tank is full - Yeah! - Congratulations - Vroom Vroom.")
 
 
 
@@ -148,6 +148,9 @@ def vehicleResponseSystem():
 
 
 #Call Function Here
-
+print("\nNational Weather Service is checking conditions....")
+sleep(2)
 vehicleResponseSystem()
+print("\nChecking current gas levels...")
+sleep(2)
 gasLevelAlert()
